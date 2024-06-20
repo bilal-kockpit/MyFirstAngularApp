@@ -1,0 +1,17 @@
+<div>
+  <div class="card h-100">
+    <div class="card-body">
+      <h5 class="card-title text-danger">{{ singletodoitem.sno }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ singletodoitem.title }}</h6>
+      <p class="card-text">{{ singletodoitem.desc }}</p>
+      <p class="card-text">
+        <small class="text-muted">{{
+          singletodoitem.status ? "Completed" : "Pending"
+        }}</small>
+      </p>
+      <button type="button" class="btn btn-danger" (click)="Ondeleteclick()">
+        Delete Item
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="container my-4">
+  <!-- Vertical spacing between form and the container -->
+  <div class="mb-4">
+    <app-add-single-item-todo
+      (addtodo)="ActionaddItemTodo($event)"
+    ></app-add-single-item-todo>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-3" *ngFor="let item of todoitems">
+      <app-single-tooitem
+        [singletodoitem]="item"
+        (deletedItem)="ActionDeletion($event)"
+      ></app-single-tooitem>
+    </div>
+  </div>
+</div>
